@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitácora Emilio Barrera</title>
+    <link rel="icon" type="image/png" href="recursos/img/ISOTIPO AMARILLO.png">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        header {
+            padding: 30px;
+            background-color: #1a1a2e;
+        }
+
+        /* Instrucción 1: Título Neón */
+        h1 {
+            color: #fff;
+            margin: 0;
+            text-shadow: 0 0 5px #bc13fe, 0 0 10px #bc13fe, 0 0 20px #bc13fe;
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        
+        .semana {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: left;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border-left: 6px solid #bc13fe;
+        }
+
+        footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            border-top: 10px solid #10355c;
+            background-color: #1d285b;
+            color: white;
+        }
+
+        
+        .logo-zoom {
+            transition: transform 0.3s ease;
+        }
+
+        .logo-zoom:hover {
+            transform: scale(1.15);
+        }
+
+        @media(max-width:600px){
+            footer { flex-direction: column; gap: 15px; padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Mi Bitácora Digital</h1>
+    </header>
+
+    <main>
+        <div class="semana">
+            <h3>Semana 1: Título de la entrada</h3>
+            <p>Aquí va el contenido de lo que aprendiste o hiciste durante esta semana.</p>
+        </div>
+    </main>
+
+    <footer>
+        <span>@lil_fabio67</span>
+        <img src="https://www.capouilliez.edu.gt/assets/img/logo.png" 
+             class="logo-zoom" 
+             height="67" width="175" 
+             alt="Logo Colegio">
+    </footer>
+        
+</body>
+</html>
