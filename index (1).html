@@ -1,113 +1,156 @@
-HTML
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bitácora Emilio Barrera</title>
-    <link rel="icon" type="image/png" href="recursos/img/ISOTIPO AMARILLO.png">
     <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f0f2f5;
-        }
+    html, body {
+        height: 100%;
+        margin: 0;
+        font-family: 'Segoe UI', Arial, sans-serif;
+        background-color: #f9f9f9;
+    }
+    body {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    header {
+        padding: 50px 20px;
+        background-color: #020b4d; 
+        color: white;
+    }
+    
+    h1 {
+        font-size: 3.5rem;
+        color: #fff;
+        text-transform: uppercase;
+        margin: 0;
+        text-shadow: 
+            0 0 7px #fff,
+            0 0 10px #fff,
+            0 0 21px #fff,
+            0 0 42px #8a3ee1,
+            0 0 82px #8a3ee1,
+            0 0 92px #8a3ee1,
+            0 0 102px #8a3ee1,
+            0 0 151px #8a3ee1;
+        animation: pulsado 2s infinite alternate;
+    }
 
-        body {
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-        }
+    @keyframes pulsado {
+        from { opacity: 1; }
+        to { opacity: 0.85; }
+    }
 
-        header {
-            padding: 30px;
-            background-color: #1a1a2e;
-        }
+    h3 {
+        margin-top: 20px;
+        font-weight: 300;
+        letter-spacing: 2px;
+        color: #cfcfff;
+    }
 
-        /* Instrucción 1: Título Neón */
-        h1 {
-            color: #fff;
-            margin: 0;
-            text-shadow: 0 0 5px #bc13fe, 0 0 10px #bc13fe, 0 0 20px #bc13fe;
-        }
+    main {
+        flex: 1;
+        padding: 20px;
+        max-width: 800px;
+        margin: 0 auto;
+        width: 100%;
+    }
 
-        main {
-            flex: 1;
-            padding: 20px;
-            max-width: 900px;
-            margin: 0 auto;
-            width: 100%;
-            box-sizing: border-box;
-        }
+    .semana {
+        background-color: white;
+        border-radius: 12px;
+        padding: 25px;
+        margin-bottom: 25px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        border-left: 6px solid rgb(12, 128, 110);
+        transition: transform 0.3s ease;
+        text-align: left;
+    }
+    .semana:hover {
+        transform: translateY(-5px);
+    }
 
-        .semana {
-            background: white;
-            border-radius: 12px;
-            padding: 20px;
-            margin: 20px 0;
-            text-align: left;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            border-left: 6px solid #bc13fe;
-        }
+    .contenedor-pdf {
+        width: 100%;
+        height: 600px;
+        margin-top: 15px;
+        border: none;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
 
-        /* Estilo para el video adaptativo */
-        .video-bitacora {
-            width: 100%;
-            max-width: 100%;
-            border-radius: 8px;
-            margin-top: 15px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-        }
+    /* Estilo para el video */
+    .video-bitacora {
+        width: 100%;
+        border-radius: 8px;
+        margin-top: 15px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
 
-        footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 50px;
-            border-top: 10px solid #10355c;
-            background-color: #1d285b;
-            color: white;
-        }
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 50px;
+        border-top: 5px solid rgb(46, 16, 110);
+        background-color: rgb(23, 19, 147);
+        color: white;
+    }
 
-        .logo-zoom {
-            transition: transform 0.3s ease;
-        }
+    footer img {
+        transition: transform 0.3s ease;
+    }
+    footer img:hover {
+        transform: scale(1.1);
+    }
 
-        .logo-zoom:hover {
-            transform: scale(1.15);
-        }
-
-        @media(max-width:600px){
-            footer { flex-direction: column; gap: 15px; padding: 20px; }
-        }
+    @media(max-width:600px){
+        header { padding: 30px 10px; }
+        h1 { font-size: 2.2rem; }
+        footer { flex-direction: column; gap: 15px; }
+        .contenedor-pdf { height: 400px; }
+    }
     </style>
 </head>
 <body>
-
     <header>
-        <h1>Mi Bitácora Digital</h1>
+        <h1>Bitácora de Emilio</h1>
+        <h3>Unidad 2da y 3ra</h3>
     </header>
-
+    
     <main>
         <div class="semana">
-            <h3>Semana 1: Introducción Arduino e Circuitos</h3>
-            <p>En esta sesión se trabajó en la plataforma Tinkercad simulando un circuito automatizado con una placa Arduino Uno, haciendo parpadear diodos LED mediante la programación de pines digitales.</p>
+            <h4>Semana 1: Introducción a CSS</h4>
+            <p>Hoy aprendimos sobre selectores y cómo cambiar el color de los textos. Aquí puedes ver mi documento sobre Arduino:</p>
+            
+            <embed 
+                src="recursos/documento/Introducción Arduino Emilio Barrera.pdf#toolbar=0&navpanes=0" 
+                type="application/pdf" 
+                class="contenedor-pdf">
+        </div>
+
+        <div class="semana">
+            <h4>Semana 2: Box Model</h4>
+            <p>Exploramos el uso de Flexbox para centrar elementos y crear layouts responsivos.</p>
+        </div>
+
+        <div class="semana">
+            <h4>Semana 3: Simulación en Tinkercad</h4>
+            <p>Grabación de la simulación del circuito con Arduino y LEDs:</p>
             
             <video class="video-bitacora" controls>
-                <source src="Grabacion_Tinkercad.mp4" type="video/mp4">
-                Tu navegador no soporta la reproducción de este video.
+                <source src="Grabación de pantalla 2026-06-01 123831.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de video.
             </video>
         </div>
     </main>
 
     <footer>
         <span>@lil_fabio67</span>
-        <img src="https://www.capouilliez.edu.gt/assets/img/logo.png" 
-             class="logo-zoom" 
-             height="67" width="175" 
-             alt="Logo Colegio">
+        <img src="https://www.capouilliez.edu.gt/assets/img/logo.png" height="65" alt="Logo Colegio">
     </footer>
-        
 </body>
-</html>
+</html>x
