@@ -1,3 +1,4 @@
+HTML
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -37,9 +38,9 @@
             max-width: 900px;
             margin: 0 auto;
             width: 100%;
+            box-sizing: border-box;
         }
 
-        
         .semana {
             background: white;
             border-radius: 12px;
@@ -48,6 +49,15 @@
             text-align: left;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
             border-left: 6px solid #bc13fe;
+        }
+
+        /* Estilo para el video adaptativo */
+        .video-bitacora {
+            width: 100%;
+            max-width: 100%;
+            border-radius: 8px;
+            margin-top: 15px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
         }
 
         footer {
@@ -60,7 +70,6 @@
             color: white;
         }
 
-        
         .logo-zoom {
             transition: transform 0.3s ease;
         }
@@ -82,8 +91,13 @@
 
     <main>
         <div class="semana">
-            <h3>Semana 1: Título de la entrada</h3>
-            <p>Aquí va el contenido de lo que aprendiste o hiciste durante esta semana.</p>
+            <h3>Semana 1: Introducción Arduino e Circuitos</h3>
+            <p>En esta sesión se trabajó en la plataforma Tinkercad simulando un circuito automatizado con una placa Arduino Uno, haciendo parpadear diodos LED mediante la programación de pines digitales.</p>
+            
+            <video class="video-bitacora" controls>
+                <source src="Grabacion_Tinkercad.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de este video.
+            </video>
         </div>
     </main>
 
