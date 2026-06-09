@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bitácora Emilio Barrera</title>
-
     <style>
     html, body {
         height: 100%;
@@ -12,25 +11,25 @@
         font-family: 'Segoe UI', Arial, sans-serif;
         background-color: #f9f9f9;
     }
-
     body {
         display: flex;
         flex-direction: column;
         text-align: center;
     }
-
     header {
         padding: 50px 20px;
-        background-color: #020b4d;
+        /* Un fondo ligeramente más oscuro ayuda a que el neón resalte */
+        background-color: #020b4d; 
         color: white;
     }
-
+    
     h1 {
         font-size: 3.5rem;
-        color: white;
+        color: #fff;
         text-transform: uppercase;
         margin: 0;
-        text-shadow:
+        /* EFECTO NEÓN: Capas de sombras de diferentes tamaños */
+        text-shadow: 
             0 0 7px #fff,
             0 0 10px #fff,
             0 0 21px #fff,
@@ -39,6 +38,7 @@
             0 0 92px #8a3ee1,
             0 0 102px #8a3ee1,
             0 0 151px #8a3ee1;
+        /* Animación opcional para que "parpadee" suavemente */
         animation: pulsado 2s infinite alternate;
     }
 
@@ -67,16 +67,16 @@
         border-radius: 12px;
         padding: 25px;
         margin-bottom: 25px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-        border-left: 6px solid rgb(12,128,110);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        border-left: 6px solid rgb(12, 128, 110);
         transition: transform 0.3s ease;
         text-align: left;
     }
-
     .semana:hover {
         transform: translateY(-5px);
     }
 
+    /* Estilos para el visor del PDF */
     .contenedor-pdf {
         width: 100%;
         height: 600px;
@@ -86,12 +86,13 @@
         box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
 
-    .video-bitacora {
+    /* Estilos para tu video */
+    .contenedor-video {
         width: 100%;
-        max-height: 500px;
         border-radius: 8px;
         margin-top: 15px;
         box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        outline: none;
     }
 
     footer {
@@ -99,81 +100,65 @@
         justify-content: space-between;
         align-items: center;
         padding: 15px 50px;
-        border-top: 5px solid rgb(46,16,110);
-        background-color: rgb(23,19,147);
+        border-top: 5px solid rgb(46, 16, 110);
+        background-color: rgb(23, 19, 147);
         color: white;
     }
 
     footer img {
         transition: transform 0.3s ease;
     }
-
     footer img:hover {
         transform: scale(1.1);
     }
 
-    @media(max-width:600px) {
-        header {
-            padding: 30px 10px;
-        }
-
-        h1 {
-            font-size: 2.2rem;
-        }
-
-        footer {
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .contenedor-pdf {
-            height: 400px;
-        }
+    @media(max-width:600px){
+        header { padding: 30px 10px; }
+        h1 { font-size: 2.2rem; }
+        footer { flex-direction: column; gap: 15px; }
+        .contenedor-pdf { height: 400px; }
     }
     </style>
 </head>
 <body>
+    <header>
+        <h1>Bitácora de Emilio</h1>
+        <h3>Unidad 2da y 3ra</h3>
+    </header>
+    
+    <main>
+        <!-- SEMANA 1 -->
+        <div class="semana">
+            <h4>Semana 1: Introducción a CSS</h4>
+            <p>Hoy aprendimos sobre selectores y cómo cambiar el color de los textos. Aquí puedes ver mi documento sobre Arduino:</p>
+            
+            <embed 
+                src="recursos/documento/Introducción Arduino Emilio Barrera.pdf#toolbar=0&navpanes=0" 
+                type="application/pdf" 
+                class="contenedor-pdf">
+        </div>
 
-<header>
-    <h1>Bitácora de Emilio</h1>
-    <h3>Unidad 2da y 3ra</h3>
-</header>
+        <!-- SEMANA 2 -->
+        <div class="semana">
+            <h4>Semana 2: Box Model</h4>
+            <p>Exploramos el uso de Flexbox para centrar elementos y crear layouts responsivos.</p>
+        </div>
 
-<main>
+        <!--  NUEVA TARJETA - SEMANA 3 -->
+        <div class="semana">
+            <h4>Semana 3: Mi video de la práctica</h4>
+            <p>En esta semana trabajamos en un proyecto práctico y grabé este video para mostrar el funcionamiento y los resultados:</p>
+            
+            <video class="contenedor-video" controls>
+                <source src="recursos/TICS EMILIO.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de este video.
+            </video>
+        </div>
+    </main>
 
-    <div class="semana">
-        <h4>Semana 1: Introducción a CSS</h4>
-        <p>Hoy aprendimos sobre selectores y cómo cambiar el color de los textos. Aquí puedes ver mi documento sobre Arduino:</p>
-
-        <embed
-            src="recursos/documento/Introducción Arduino Emilio Barrera.pdf"
-            type="application/pdf"
-            class="contenedor-pdf">
-    </div>
-
-    <div class="semana">
-        <h4>Semana 2: Box Model</h4>
-        <p>Exploramos el uso de Flexbox para centrar elementos y crear layouts responsivos.</p>
-    </div>
-
-    <div class="semana">
-        <h4>Semana 3: Simulación en Tinkercad</h4>
-        <p>Grabación de la simulación del circuito con Arduino y LEDs:</p>
-
-        <video class="video-bitacora" controls preload="metadata">
-            <source src="video.mp4" type="video/mp4">
-            Tu navegador no soporta videos HTML5.
-        </video>
-    </div>
-
-</main>
-
-<footer>
-    <span>@lil_fabio67</span>
-    <img src="https://www.capouilliez.edu.gt/assets/img/logo.png"
-         height="65"
-         alt="Logo Colegio">
-</footer>
-
+    <footer>
+        <span>@lil_fabio67</span>
+        <img src="https://www.capouilliez.edu.gt/assets/img/logo.png" height="65" alt="Logo Colegio">
+    </footer>
 </body>
 </html>
