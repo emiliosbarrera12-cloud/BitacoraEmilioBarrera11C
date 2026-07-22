@@ -18,7 +18,6 @@
     }
     header {
         padding: 50px 20px;
-        /* Un fondo ligeramente más oscuro ayuda a que el neón resalte */
         background-color: #020b4d; 
         color: white;
     }
@@ -28,7 +27,6 @@
         color: #fff;
         text-transform: uppercase;
         margin: 0;
-        /* EFECTO NEÓN: Capas de sombras de diferentes tamaños */
         text-shadow: 
             0 0 7px #fff,
             0 0 10px #fff,
@@ -38,7 +36,6 @@
             0 0 92px #8a3ee1,
             0 0 102px #8a3ee1,
             0 0 151px #8a3ee1;
-        /* Animación opcional para que "parpadee" suavemente */
         animation: pulsado 2s infinite alternate;
     }
 
@@ -76,7 +73,6 @@
         transform: translateY(-5px);
     }
 
-    /* Estilos para el visor del PDF */
     .contenedor-pdf {
         width: 100%;
         height: 600px;
@@ -86,7 +82,6 @@
         box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
 
-    /* Estilos para tus videos */
     .contenedor-video {
         width: 100%;
         border-radius: 8px;
@@ -131,10 +126,10 @@
             <h4>Semana 1: Introducción a CSS</h4>
             <p>Hoy aprendimos sobre selectores y cómo cambiar el color de los textos. Aquí puedes ver mi documento sobre Arduino:</p>
             
-            <embed 
-                src="resursos/documento/Introducción Arduino Emilio Barrera (1).pdf" 
-                type="application/pdf" 
+            <iframe 
+                src="recursos/documento/introduccion-arduino.pdf" 
                 class="contenedor-pdf">
+            </iframe>
         </div>
 
         <div class="semana">
@@ -147,7 +142,7 @@
             <p>En esta semana trabajamos en un proyecto práctico y grabé este video para mostrar el funcionamiento y los resultados:</p>
             
             <video class="contenedor-video" controls>
-                <source src="/resursosdocumento/TICS EMILIO.mp4" type="video/mp4">
+                <source src="recursos/documento/tics-emilio.mp4" type="video/mp4">
                 Tu navegador no soporta la reproducción de este video.
             </video>
         </div>
@@ -157,7 +152,7 @@
             <p>Aquí comparto el segundo video con los avances y las conclusiones de la práctica final de la unidad:</p>
             
             <video class="contenedor-video" controls>
-                <source src="resursos/documento/Video.802637054.866155 1.mp4" type="video/mp4">
+                <source src="recursos/documento/video-semana4.mp4" type="video/mp4">
                 Tu navegador no soporta la reproducción de este video.
             </video>
         </div>
@@ -177,19 +172,19 @@
             <p>En esta sesión armamos el circuito utilizando el sensor ultrasónico. Muestro los resultados aquí:</p>
             
             <video class="contenedor-video" controls>
-                <source src="resursos/documento/Semana 6.mp4" type="video/mp4">
+                <source src="recursos/documento/semana-6.mp4" type="video/mp4">
                 Tu navegador no soporta la reproducción de este video.
             </video>
         </div>
 
         <div class="semana">
             <h4>Semana 7</h4>
-            <p></p>¨
+            <p>Demostración en Tinkercad del circuito final:</p>
 
-             <video class="contenedor-video" controls>
-                <source src="resursos/documento/Circuit design Magnificent Snicket - Tinkercad - Google Chrome 2026-07-21 22-02-38.mp4" type="video/mp4">
+            <video class="contenedor-video" controls>
+                <source src="recursos/documento/semana-7.mp4" type="video/mp4">
                 Tu navegador no soporta la reproducción de este video.
-             </video>
+            </video>
         </div>
     </main>
 
