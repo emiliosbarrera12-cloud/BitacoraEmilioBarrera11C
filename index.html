@@ -3,197 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bitácora Emilio Barrera</title>
-    <style>
-    html, body {
-        height: 100%;
-        margin: 0;
-        font-family: 'Segoe UI', Arial, sans-serif;
-        background-color: #f9f9f9;
-    }
-    body {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-    }
-    header {
-        padding: 50px 20px;
-        background-color: #020b4d; 
-        color: white;
-    }
-    
-    h1 {
-        font-size: 3.5rem;
-        color: #fff;
-        text-transform: uppercase;
-        margin: 0;
-        text-shadow: 
-            0 0 7px #fff,
-            0 0 10px #fff,
-            0 0 21px #fff,
-            0 0 42px #8a3ee1,
-            0 0 82px #8a3ee1,
-            0 0 92px #8a3ee1,
-            0 0 102px #8a3ee1,
-            0 0 151px #8a3ee1;
-        animation: pulsado 2s infinite alternate;
-    }
-
-    @keyframes pulsado {
-        from { opacity: 1; }
-        to { opacity: 0.85; }
-    }
-
-    h3 {
-        margin-top: 20px;
-        font-weight: 300;
-        letter-spacing: 2px;
-        color: #cfcfff;
-    }
-
-    main {
-        flex: 1;
-        padding: 20px;
-        max-width: 800px;
-        margin: 0 auto;
-        width: 100%;
-    }
-
-    .semana {
-        background-color: white;
-        border-radius: 12px;
-        padding: 25px;
-        margin-bottom: 25px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-        border-left: 6px solid rgb(12, 128, 110);
-        transition: transform 0.3s ease;
-        text-align: left;
-    }
-    .semana:hover {
-        transform: translateY(-5px);
-    }
-
-    /* Estilo del visor del PDF */
-    .contenedor-pdf {
-        width: 100%;
-        height: 600px;
-        margin-top: 15px;
-        border: none;
-        border-radius: 8px;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-
-    /* Estilo de los reproductores de Video */
-    .contenedor-video {
-        width: 100%;
-        max-height: 450px;
-        border-radius: 8px;
-        margin-top: 15px;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        outline: none;
-    }
-
-    footer {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px 50px;
-        border-top: 5px solid rgb(46, 16, 110);
-        background-color: rgb(23, 19, 147);
-        color: white;
-    }
-
-    footer img {
-        transition: transform 0.3s ease;
-    }
-    footer img:hover {
-        transform: scale(1.1);
-    }
-
-    @media(max-width:600px){
-        header { padding: 30px 10px; }
-        h1 { font-size: 2.2rem; }
-        footer { flex-direction: column; gap: 15px; }
-        .contenedor-pdf { height: 400px; }
-    }
-    </style>
+    <title>Proyecto Final - TICS</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- Menú de Navegación -->
     <header>
-        <h1>Bitácora de Emilio</h1>
-        <h3>Unidad 2da y 3ra</h3>
+        <div class="logo">🚀 Mi Proyecto Final</div>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#circuito">Circuito</a>
+            <a href="#documento">Documento</a>
+            <a href="#infografia">Infografía</a>
+            <a href="#podcast">Podcast</a>
+        </nav>
     </header>
-    
-    <main>
-        <div class="semana">
-            <h4>Semana 1: Introducción a CSS</h4>
-            <p>Hoy aprendimos sobre selectores y cómo cambiar el color de los textos. Aquí puedes ver mi documento sobre Arduino:</p>
-            
-            <iframe 
-                src="recursos/documento/Introducción Arduino Emilio Barrera.pdf" 
-                class="contenedor-pdf">
-            </iframe>
-        </div>
 
-        <div class="semana">
-            <h4>Semana 2: Box Model</h4>
-            <p>Exploramos el uso de Flexbox para centrar elementos y crear layouts responsivos.</p>
-        </div>
+    <!-- Sección de Inicio / Portada -->
+    <section id="inicio" class="hero">
+        <h1>Bienvenido a mi Landing Page</h1>
+        <p>Proyecto Final de TICS - Explora cada uno de los apartados a continuación.</p>
+        <a href="#circuito" class="btn">Empezar a explorar</a>
+    </section>
 
-        <div class="semana">
-            <h4>Semana 3: Mi video de la práctica</h4>
-            <p>En esta semana trabajamos en un proyecto práctico y grabé este video para mostrar el funcionamiento y los resultados:</p>
+    <!-- Apartado 1: Circuito (Video o Imagen) -->
+    <section id="circuito" class="section-card">
+        <div class="content-box">
+            <h2>⚡ Circuito</h2>
+            <p>A continuación se muestra el video o la imagen demostrativa del funcionamiento del circuito:</p>
             
-            <video class="contenedor-video" controls>
-                <source src="recursos/documento/TICS EMILIO.mp4" type="video/mp4">
-                Tu navegador no soporta la reproducción de este video.
+            <!-- OPINIÓN A: Si subes un video a tu carpeta (ej: video.mp4) -->
+            <video controls class="media-element">
+                <source src="RECURSOS/circuito.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de videos.
             </video>
-        </div>
 
-        <div class="semana">
-            <h4>Semana 4: Video arduino</h4>
-            <p>Repasaremos un circuito de la unidad:</p>
-            
-            <video class="contenedor-video" controls>
-                <source src="recursos/documento/Video.802637054.866155 1.mp4" type="video/mp4">
-                Tu navegador no soporta la reproducción de este video.
-            </video>
+            <!-- OPINIÓN B (Si prefieres poner una imagen en vez de video, borra lo de arriba y usa esto):
+            <img src="circuito.jpg" alt="Foto de mi circuito" class="media-element"> -->
         </div>
-        
-        <div class="semana">
-            <h4>Semana 5: Semáforo</h4>
-            <p>En esta semana trabajamos en el circuito del semáforo. Aquí puedes ver la demostración en video:</p>
-            
-            <video class="contenedor-video" controls>
-                <source src="recursos/documento/1783362739663_OneCameraFinalVideo (1).mp4" type="video/mp4">
-                Tu navegador no soporta la reproducción de este video.
-            </video>
-        </div>
+    </section>
 
-        <div class="semana">
-            <h4>Semana 6: Circuito Ultrasónico</h4>
-            <p>En esta sesión armamos el circuito utilizando el sensor ultrasónico. Muestro los resultados aquí:</p>
+    <!-- Apartado 2: Documento de Word -->
+    <section id="documento" class="section-card alt-bg">
+        <div class="content-box">
+            <h2>📄 Documento de Word</h2>
+            <p>Puedes consultar o descargar el documento de investigación del proyecto:</p>
             
-            <video class="contenedor-video" controls>
-                <source src="recursos/documento/Semana 6.mp4" type="video/mp4">
-                Tu navegador no soporta la reproducción de este video.
-            </video>
+            <!-- Cambia 'documento.pdf' o 'documento.docx' por el nombre real de tu archivo en la carpeta -->
+            <a href="documento.pdf" class="action-btn" target="_blank">📥 Descargar / Ver Documento</a>
         </div>
+    </section>
 
-        <div class="semana">
-            <h4>Semana 7 Demostración de Tinkercad</h4>
-            <p>Demostracion en tinkercad de circuito final</p>
+    <!-- Apartado 3: Infografía -->
+    <section id="infografia" class="section-card">
+        <div class="content-box">
+            <h2>📊 Infografía</h2>
+            <p>Resumen visual y esquemático del proyecto:</p>
             
-            <video class="contenedor-video" controls>
-                <source src="recursos/documento/semana7.mp4" type="video/mp4">
-                Tu navegador no soporta la reproducción de este video.
-            </video>
+            <!-- Cambia 'infografia.png' por el nombre de tu archivo de imagen -->
+            <img src="infografia.png" alt="Infografía del proyecto" class="media-element">
         </div>
-    </main>
+    </section>
 
+    <!-- Apartado 4: Podcast -->
+    <section id="podcast" class="section-card alt-bg">
+        <div class="content-box">
+            <h2>🎙️ Podcast</h2>
+            <p>Escucha la explicación en audio sobre el desarrollo y conclusiones:</p>
+            
+            <!-- Cambia 'podcast.mp3' por el nombre de tu archivo de audio en la carpeta -->
+            <audio controls class="audio-element">
+                <source src="podcast.mp3" type="audio/mp3">
+                Tu navegador no soporta la reproducción de audio.
+            </audio>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <span>@lil_fabio67</span>
-        <img src="https://www.capouilliez.edu.gt/assets/img/logo.png" height="65" alt="Logo Colegio">
+        <p>&copy; 2026 - Proyecto Final TICS. Todos los derechos reservados.</p>
     </footer>
+
 </body>
 </html>
